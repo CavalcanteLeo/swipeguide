@@ -1,0 +1,7 @@
+appId: com.leocavalcante86.SwipeGuide
+---
+- launchApp
+
+- tapOn:
+    id: 'like-button-0'
+- assertVisible: '1 likes'

@@ -1,0 +1,3 @@
+# 1st all deploy to branch main will trigger a matrix to build all customers
+# OR
+# Deploy on customer branch will trigger a build for that customer

@@ -1,0 +1,67 @@
+{
+  "cli": {
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "customer-1-local": {
+      "android": {
+        "env": {
+          "ENV_FILE": ".env.customer1.local"
+        },
+        "withoutCredentials": true
+      },
+      "ios": {
+        "env": {
+          "ENV_FILE": ".env.customer1.local"
+        },
+        "simulator": true,
+        "withoutCredentials": true
+      }
+    },
+    "customer-2-local": {
+      "android": {
+        "env": {
+          "ENV_FILE": ".env.customer2.local"
+        },
+        "withoutCredentials": true
+      },
+      "ios": {
+        "env": {
+          "ENV_FILE": ".env.customer2.local"
+        },
+        "simulator": true,
+        "withoutCredentials": true
+      }
+    },
+    "customer-1-dev": {
+      "android": {
+        "env": {
+          "ENV_FILE": ".env.customer1.dev"
+        },
+        "withoutCredentials": true
+      },
+      "ios": {
+        "env": {
+          "ENV_FILE": ".env.customer1.dev"
+        },
+        "simulator": true,
+        "withoutCredentials": true
+      }
+    },
+    "customer-2-dev": {
+      "android": {
+        "env": {
+          "ENV_FILE": ".env.customer2.dev"
+        },
+        "withoutCredentials": true
+      },
+      "ios": {
+        "env": {
+          "ENV_FILE": ".env.customer2.dev"
+        },
+        "simulator": true,
+        "withoutCredentials": true
+      }
+    }
+  }
+}
