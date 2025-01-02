@@ -44,4 +44,16 @@ describe('CustomText', () => {
     const textComponent = getByText('Styled Text');
     expect(textComponent.props.style).toContainEqual(additionalStyle);
   });
+
+  it('respects the numberOfLines prop', () => {
+    const longText =
+      'Long long long text, Long long long text, Long long long text, Long long long text, Long long long text';
+    const { toJSON } = render(
+      <CustomText numberOfLines={2} testID="custom-text">
+        {longText}
+      </CustomText>
+    );
+
+    expect(toJSON()).toMatchSnapshot();
+  });
 });

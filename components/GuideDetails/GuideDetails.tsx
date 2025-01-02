@@ -3,11 +3,12 @@ import { Text, TouchableOpacity, ScrollView, View } from 'react-native';
 import { z } from 'zod';
 import { detailedGuideSchema } from '@/api/schema/schema';
 import { useGuideLikeStore } from '@/store';
-import Time from '../Time/Time';
+
 import CustomText from '../CustomText/CustomText';
 import LikeButton from '../LikeButton/LikeButton';
 import ListOfTags from '../ListOfTags/ListOfTags';
 import StepCarousel from '../StepCarousel/StepCarousel';
+import Time from '../Time/Time';
 
 interface GuideDetailsProps {
   guide: z.infer<typeof detailedGuideSchema>;
@@ -16,7 +17,11 @@ interface GuideDetailsProps {
 const GuideDetails = ({ guide }: GuideDetailsProps) => {
   return (
     <ScrollView style={{ backgroundColor: '#ece2d0' }}>
-      <CustomText style={{ marginHorizontal: 16, paddingTop: 16 }} type="title">
+      <CustomText
+        testID="main-task-title"
+        style={{ marginHorizontal: 16, paddingTop: 16 }}
+        type="title"
+      >
         {guide.MainTask}
       </CustomText>
 
@@ -38,7 +43,11 @@ const GuideDetails = ({ guide }: GuideDetailsProps) => {
         style={{ marginTop: 16, paddingHorizontal: -16 }}
       />
 
-      <CustomText style={{ marginTop: 8, marginHorizontal: 16 }} type="body">
+      <CustomText
+        testID="main-task-summary"
+        style={{ marginTop: 8, marginHorizontal: 16 }}
+        type="body"
+      >
         {guide.MainTaskSummary}
       </CustomText>
 

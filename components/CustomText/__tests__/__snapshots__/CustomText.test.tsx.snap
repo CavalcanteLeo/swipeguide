@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomText respects the numberOfLines prop 1`] = `
+<Text
+  numberOfLines={2}
+  style={
+    [
+      {
+        "color": "#000",
+        "fontSize": 17,
+        "letterSpacing": 0.1,
+        "lineHeight": 20,
+      },
+      {},
+    ]
+  }
+  testID="custom-text"
+>
+  Long long long text, Long long long text, Long long long text, Long long long text, Long long long text
+</Text>
+`;

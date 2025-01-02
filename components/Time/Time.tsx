@@ -6,15 +6,13 @@ interface TimeProps extends TextProps {
   time: number;
 }
 
-const TimeComponent: React.FC<TimeProps> = ({ time, ...rest }) => {
+const TimeComponent: React.FC<TimeProps> = ({ time }) => {
   const formattedDateTime = timestampToDate(time);
 
   return (
-    <View {...rest}>
-      <CustomText type="caption" testID="time-component-text">
-        {formattedDateTime}
-      </CustomText>
-    </View>
+    <CustomText type="caption" testID="time-component-text">
+      {formattedDateTime}
+    </CustomText>
   );
 };
 

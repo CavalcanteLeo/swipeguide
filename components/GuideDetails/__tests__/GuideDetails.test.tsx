@@ -35,4 +35,25 @@ describe('GuideDetails Component', () => {
     expect(getByText('Step 1')).toBeTruthy();
     expect(getByText('Step 2')).toBeTruthy();
   });
+
+  it('fails if MainTask is not displayed', () => {
+    const { queryByText } = render(<GuideDetails guide={validMockGuide} />);
+
+    expect(queryByText('Sample Task')).toBeTruthy();
+    expect(queryByText('Nonexistent Task')).toBeFalsy();
+  });
+
+  it('ensures testID="main-task-title" always has a title', () => {
+    const { getByTestId } = render(<GuideDetails guide={validMockGuide} />);
+    const mainTaskTitle = getByTestId('main-task-title');
+
+    expect(mainTaskTitle.props.children).toBeTruthy();
+  });
+
+  it('ensures testID="main-task-summary" always has a summary', () => {
+    const { getByTestId } = render(<GuideDetails guide={validMockGuide} />);
+    const mainTaskSummary = getByTestId('main-task-summary');
+
+    expect(mainTaskSummary.props.children).toBeTruthy();
+  });
 });

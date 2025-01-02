@@ -1,9 +1,9 @@
 import React from 'react';
-import { Text, TextStyle } from 'react-native';
+import { Text, TextProps, TextStyle } from 'react-native';
 
 type TextType = 'title' | 'subtitle' | 'body' | 'caption';
 
-interface CustomTextProps {
+interface CustomTextProps extends TextProps {
   children: React.ReactNode;
   type?: TextType;
   style?: TextStyle | TextStyle[];
@@ -57,8 +57,8 @@ const CustomText: React.FC<CustomTextProps> = ({
     <Text
       style={[textStyles[type], style]}
       numberOfLines={numberOfLines}
-      {...props}
       testID={testID}
+      {...props}
     >
       {children}
     </Text>
